@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>HealthBot - AI Disease Awareness</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+ 
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="title">
+          <img src="https://cdn-icons-png.flaticon.com/512/4712/4712139.png" 
+               alt="HealthBot Logo" class="logo" />
+          <h1>HealthBot</h1>
+          <p class="tagline">Reliable disease awareness & prevention</p>
+        </div>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <a href="#" id="emergencyBtn" class="call-btn" title="Emergency WhatsApp">
+        <img src="https://cdn-icons-png.flaticon.com/512/597/597177.png" alt="Emergency Icon" />
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero container">
+      <div class="hero-center">
+        <h2>Ask HealthBot — your AI health awareness assistant</h2>
+        <p>Get prevention tips, symptom info, and when to seek care. ⚠ Not a substitute for medical advice.</p>
+
+        <div class="cta-row">
+          <a class="btn primary" href="#" id="openChat">Start Chat</a>
+        </div>
+
+       
+        <div class="cta-row secondary-buttons">
+          <button class="btn ghost" id="findMedicalShops"><strong>Medical Shops</strong></button>
+          <button class="btn primary" id="findHospitals"><strong>Hospitals</strong></button>
+          <button class="btn ghost" id="firstAidOption"><strong>First Aid</strong></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq container">
+      <h3>Frequently Asked Questions</h3>
+      <div class="cards">
+        <div class="card">
+          <h4>How do I prevent flu?</h4>
+          <p>Get vaccinated, wash hands regularly, avoid close contact with sick people.</p>
+        </div>
+        <div class="card">
+          <h4>What are common COVID-19 symptoms?</h4>
+          <p>Fever, cough, fatigue, loss of taste or smell.</p>
+        </div>
+        <div class="card">
+          <h4>Can HealthBot give medical advice?</h4>
+          <p>No, HealthBot provides information only. Always consult a doctor for medical decisions.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="chatOverlay" class="chat-overlay">
+    <div class="chat-overlay-inner">
+      <div class="chat-header">
+        <strong>HealthBot</strong>
+        <button id="closeChat" class="close-btn">✖</button>
+      </div>
+
+      <div class="messages" id="messages">
+        <div class="msg bot">
+          👋 Hi! I can help with prevention tips, symptoms, and vaccines. This is not medical advice.
+          <button class="tts-btn" title="Listen">🔊</button>
+        </div>
+      </div>
+
+      <form id="ChatForm" class="chat-form">
+        <input id="userInput" type="text" placeholder="Ask about symptoms, prevention, vaccines..." autocomplete="off" />
+        <label for="fileUpload" class="upload-btn">➕</label>
+        <input type="file" id="fileUpload" accept="image/*" style="display:none;" />
+        <button type="button" id="micBtn">🎤</button>
+        <button type="submit">Send</button>
+      </form>
+
+      <div class="disclaimer">⚠ For emergencies call your local emergency number. HealthBot provides info only.</div>
+    </div>
+  </div>
+
+  <div id="firstAidModal" class="modal">
+    <div class="modal-content">
+      <span id="closeModal" class="close">&times;</span>
+      <div id="modalText">Loading first aid...</div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div>© <span id="year"></span> HealthBot • Not medical advice</div>
+      <div>Made with ❤ for public health • SIH prototype</div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

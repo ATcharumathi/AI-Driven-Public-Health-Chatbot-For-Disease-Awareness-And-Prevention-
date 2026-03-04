@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact - HealthBot</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="title">
+          <h1>HealthBot</h1>
+          <p class="tagline">Reliable disease awareness & prevention</p>
+        </div>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="container box">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:healthproject@example.com">healthproject@example.com</a></p>
+      <p>Phone: +91-98765-43210</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div>© <span id="year"></span> HealthBot • Not medical advice</div>
+      <div>Made with ❤ for public health • SIH prototype</div>
+    </div>
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
